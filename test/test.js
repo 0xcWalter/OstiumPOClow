@@ -13,7 +13,7 @@ async function testIt() {
     provider
   );
   let blockNumber = (await contract.arbBlockNumber()).toString();
-  fs.writeFileSync("./currentBlock", blockNumber);
+  fs.writeFileSync("test/currentBlock", blockNumber);
   let command = "forge test -vvvv";
   var child = exec(command);
   saveText = "";
